@@ -62,9 +62,9 @@ x_names = ['mx1', 'mx2', 'mx3', 'mx4', 'mx5', 'mx6']
 y_names = ['my1', 'my2', 'my3', 'my4', 'my5', 'my6']
 z_names = ['mf1', 'mf2', 'mf3', 'mf4', 'mf5', 'mf6', 'mf7', 'mf8', 'mf9']
 
-create_gaussmf(x_antecedents, x_intervals, x_names)
-create_gaussmf(y_antecedents, y_intervals, y_names)
-create_gaussmf(z_consequents, z_intervals, z_names)
+create_trianglemf(x_antecedents, x_intervals, x_names)
+create_trianglemf(y_antecedents, y_intervals, y_names)
+create_trianglemf(z_consequents, z_intervals, z_names)
 
 x_antecedents.view()
 
@@ -130,6 +130,5 @@ plt.show()
 mae = mean_absolute_error(z, simulated)
 mse = mean_squared_error(z, simulated)
 r2 = r2_score(z, simulated)
-print(f"Mean Absolute Error (MAE): {mae}")
 print(f"Mean Squared Error (MSE): {mse}")
 print(f"R2 Score: {r2}")
